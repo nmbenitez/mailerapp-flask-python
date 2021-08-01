@@ -55,7 +55,7 @@ def create():
 def send(to, subject, content):
     sg = sendgrid.SendGridAPIClient(api_key=current_app.config['SENDGRID_KEY'])
     
-    #from_email = Email(email=current_app.config['FROM_EMAIL'])
+    #from_email = Email(current_app.config['FROM_EMAIL'])
     from_email = Email('nahuelbenitezchn@gmail.com')
     to_email = To(to)
     content = Content('text/plain', content)
